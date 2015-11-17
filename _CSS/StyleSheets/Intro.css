@@ -1,0 +1,211 @@
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, body, figure { margin: 0; padding: 0; }
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'Arkhip';
+   src: local("Arkhip"),
+        url(../Fonts/Arkhip_font.ttf);
+}
+
+* {
+  font-family: 'Arkhip';
+  background-color: black;
+  transition: all 8s ease-in;
+  -webkit-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Chrome & Safari **/
+  -moz-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Firefox **/
+  -o-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Opera **/
+}
+
+html, body {
+  font-family: 'Arkhip';
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+  color: white;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+.project-box {
+  max-width: 1in;
+  min-width: 1in;
+  max-height: 1in;
+  min-height: 1in;
+  margin: 0px;
+  padding: 25px;
+  border-radius: .5in;
+  font-size: 13pt;
+  float: left;
+  margin-bottom: 0px;
+  background-color: white !important;
+  color:black !important;
+  align-items: center;
+  overflow: hidden;
+  text-align:center;
+}
+
+.project-box:hover {
+
+}
+
+#intro-section {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  border-radius: 0;
+  padding: 0;
+  color: white;
+  font-size: 20pt;
+}
+
+#welcome {
+}
+
+#intro-button {
+  top: .5in;
+  height: .6in;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  padding-right: .2in;
+  padding-left: .2in;
+  padding-bottom: .1in;
+  padding-top: .1in;
+  left: .35in;
+  z-index: 9;
+  background-color: white;
+  border-color: gray;
+  border-radius: .25in;
+  border-width: thin;
+  font-size: 10pt;
+  font-weight: bold;
+  color: black;
+  -webkit-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+  -moz-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+  -o-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+  -ms-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+  transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+}
+
+#intro-button:hover {
+  text-decoration: line-through;
+  background-color: black;
+  color: lime;
+}
+
+#intro-button:active {
+  text-decoration: line-through;
+  color: lime;
+  background-color: black;
+
+}
+
+#home {
+  color: white;
+}
+
+#typing-intro {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+  border: 0px;
+  color: lime;
+}
+
+#bottom-nav {
+  position: absolute;
+  left: .4in;
+  top: 295%;
+  text-align: left;
+  color: black;
+  width: 100%;
+  font-size: 18pt;
+  height: .5in;
+  padding-left:3em;
+}
+
+#jobbox {
+   margin: 0;
+   width:25%;
+   height:15%;
+   border: inset;
+   border-color: black;
+}
+
+#banner-wrapper {
+  height: 2in;
+  width: 100%;
+  margin-bottom: 0in;
+  top: 100%;
+}
+
+
+#banner-name {
+  position: relative;
+  top: .2in;
+  left: .2in;
+  width: 98%;
+  text-align: left;
+}
+
+#profile-picture-wrapper {
+  width: 100%;
+  height: 8in;
+}
+
+#profile-picture {
+  position: relative;
+  float: right;
+  border-radius: 1in;
+  height: 5.5in;
+  width: 5.5in;
+  right: 2in;
+  top: .5in;
+}
+
+#profile-paragraph {
+  position: relative;
+  float: left;
+  width: 6in;
+  height: 5in;
+  left: 3in;
+  top: 1.5in;
+  font-size: 17pt;
+}
+
+#compsci-link {
+  color:white;
+  text-align: right;
+}
+
+a {
+  text-decoration:none;
+  color: white;
+}
+
+a:hover {
+  color: lime;
+}

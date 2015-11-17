@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zachary Collins Lab 2 </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="Shortcut Icon" href="https://upload.wikimedia.org/wikipedia/commons/2/29/Logo-sith-empire1.png">
+    <style>
+    td, th {
+  	height: 1.5em;
+  	width: 10em;
+  	text-align: center;
+    }
+    .right {
+  	text-align: right;
+    }
+    .left {
+  	text-align: left;
+    }
+
+    #nameEntry:focus {
+  	clear: both;
+    }
+    </style>
+  </head>
+  <body>
+    <section>
+  	<h1>Lab 2</h1>
+  	<table border="1">
+    	<th></th>
+    	<th style="color:red">Red</th>
+    	<th style="color:green">Green</th>
+    	<th style="color:blue">Blue</th>
+    	<tr>
+      	<th style="color:red" >Red</th>
+      	<td style="color:red" class="right">red</td>
+      	<td style="color:brown" class="left">brown</td>
+      	<td style="color:purple" class="left">purple</td>
+    	</tr>
+    	<tr>
+      	<th style="color:green">Green</th>
+      	<td style="color:brown" class="left">brown</td>
+      	<td style="color:green" class="right">green</td>
+      	<td style="color:aqua" class="left">aqua</td>
+    	</tr>
+    	<tr>
+      	<th style="color:blue">Blue</th>
+      	<td style="color:purple" class="left">purple</td>
+      	<td style="color:aqua" class="left">aqua</td>
+      	<td style="color:blue" class="right">blue</td>
+    	</tr><tr>
+      	<th>Result</th>
+      	<strong><td colspan="3" style="background-size:contain; background-image: url(http://i.ytimg.com/vi/9udYi7exojk/maxresdefault.jpg); color:white;">Taste the rainbow </td></strong>
+    	</tr>
+  	</table>
+    </section>
+    <section>
+  	<form action="Submit" method="GET" name="size">
+    	<label for="size">Please select the size you want: &nbsp;</label>
+    	<label for="big">BIG</label>
+    	<input type="radio" name="size" value="big">
+    	<label for="medium">MEDIUM</label>
+    	<input type="radio" name="size" value="medium">
+    	<label for="small">SMALL</label>
+    	<input type="radio" name="size" value="small">
+  	</form>
+  	</br>
+  	<form>
+    	<label for="name">Enter your name here: </label>
+    	<input id="nameEntry" type="text" name="name" value="Name Goes here!" onclick='javascript: this.value =""'>
+  	</form>
+  	<br/>
+  	<form name="features">
+    	<label for="features">Select the features you want:</label>
+    	<label for="long">Long sleeves</label>
+    	<input type="checkbox" name="long">
+    	<label for="turtle">Turtleneck</label>
+    	<input type="checkbox" name="turtle">
+    	<label for="torso">Long torso</label>
+    	<input type="checkbox" name="torso">
+  	</form>
+    </section>
+  </br></br></br></br>
+  </body>
+</html>

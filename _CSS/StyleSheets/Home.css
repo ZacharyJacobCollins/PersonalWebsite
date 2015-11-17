@@ -1,0 +1,96 @@
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, body, figure { margin: 0; padding: 0; }
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'Arkhip';
+   src: local("Arkhip"),
+        url(../Fonts/Arkhip_font.ttf);
+}
+
+* {
+  overflow: hidden;
+  font-family: 'Arkhip';
+  background-color: white;
+  color: black;
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in, color 2s linear, background-color 2s ease-out; /** Chrome & Safari **/
+  -moz-transition: all 2s ease-in, color 2s linear, background-color 2s ease-out; /** Firefox **/
+  -o-transition: all 2s ease-in, color 2s linear, background-color 2s ease-out; /** Opera **/
+  }
+}
+
+html, body {
+  font-family: 'Arkhip';
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+  color: white;
+}
+
+h2 {
+  float:left;
+  margin:.1in;
+}
+
+#bottom-nav {
+  position: absolute;
+  display: inline-block;
+  left: .4in;
+  top: 95%;
+  text-align: left;
+  color: black;
+  width: 100%;
+  font-size: 18pt;
+  height: .5in;
+  padding-left:3em;
+}
+
+#banner-wrapper {
+  height: 2in;
+  width: 100%;
+  margin-bottom: 0in;
+  top: 100%;
+}
+
+#banner-name {
+  position: relative;
+  top: .2in;
+  left: .2in;
+  width: 98%;
+  text-align: left;
+}
+
+#profile-picture-wrapper {
+  width: 100%;
+  height: 8in;
+}
+
+#profile-picture {
+  position: relative;
+  float: right;
+  border-radius: 1in;
+  height: 5.5in;
+  width: 5.5in;
+  right: 2in;
+  top: .5in;
+}
+
+#profile-paragraph {
+  position: relative;
+  float: left;
+  width: 6in;
+  height: 5in;
+  left: 3in;
+  top: 1.5in;
+  font-size: 17pt;
+}
+
+a {
+  text-decoration:none;
+}
+
+a:hover {
+  color: lime;
+}
