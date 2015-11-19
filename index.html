@@ -100,44 +100,40 @@ TODO transfer the typing intro over
     </div>
 
 
-
-
-
 	</body>
 	<footer>
-		<!-- Executes intro typing text -->
-    <script>
-      $(function() {
-          $('#intro-button').click(function() {
+		<!-- Executes intro typing text
 
-                $("#typing-intro").typed({
-                  strings: ["&emsp;INITSEG  = DEF_INITSEG</br>&emsp;SYSSEG   = DEF_SYSSEG</br>&emsp;SETUPSEG = DEF_SETUPSEG</br></br>&emsp;#ifndef __BIG_KERNEL__</br>&emsp;&emsp;&emsp;&emsp;.byte</br>&emsp;#else</br>&emsp;&emsp;&emsp;&emsp;.byte   LOADED_HIGH</br></br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;char loadflags;</br>&emsp;&emsp;&emsp;char type_of_loader;</br>&emsp;&emsp;&emsp;LOADHIGH = 1</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;DS = CS - DELTA_INITSEG;</bremsp;&emsp;&emsp;&emsp;if ( (loadflags & LOADHIGH) && !type_of_loader ) {</br>&emsp;&emsp;&emsp;&emsp;&emsp;prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&emsp;&emsp;&emsp;goto no_sig_loop;</br>&emsp;&emsp;&emsp;}</br>&emsp;}</br></br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR  = 0x1E8</br>&emsp;&emsp;&emsp;E820MAP = 0x2D0</br>&emsp;{</br>&emsp;&emsp;&emsp;(long)DS:[0x1E0] = 0;</br></br>&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL</br>&emsp;&emsp;&emsp;(byte)DS:[0x1E8] = 0;</br></br>&emsp;struct efi_variable</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;&emsp;grub_efi_guid_t guid;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t namelen;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t size;</br>&emsp;&emsp;&emsp;&emsp;multiboot_uint16_t reserved;</br>&emsp;&emsp;&emsp;};</br>&emsp;}</br></br>&emsp;initialize() {</bremsp;&emsp;multiboot_uint32_t size;</br>&emsp;}"],
-                   typeSpeed: 0,
-                   backDelay: 20,
-                   loop: false,
-                   loopCount: false,
-                   callback: function () {
-                     var date = new Date();
-                     date.setTime(date.getTime() + (6*24*60*60*1000));
-                     var expires = "expires="+date.toUTCString();
-                     document.cookie = 'introCookie' + "=" + 'visited' + "; " + expires;
-                   }
-              });
-							$('*').css({
-								'background-color': 'white',
-							})
-							$('#welcome').css({
-								'visibility': 'hidden'
-							})
-							$('a').css({
-								'visibility': 'hidden'
-							})
-          })
-      })
+		$('*').css({
+			'background-color': 'white',
+		})
+		$('#welcome').css({
+			'visibility': 'hidden'
+		})
+		$('a').css({
+			'visibility': 'hidden' -->
+    <script type="text/javascript">
+			$("#intro-button").click(function() {
+				$("#typing-intro").typed({
+					strings: ["&emsp;INITSEG  = DEF_INITSEG</br>&emsp;SYSSEG   = DEF_SYSSEG</br>&emsp;SETUPSEG = DEF_SETUPSEG</br></br>&emsp;#ifndef __BIG_KERNEL__</br>&emsp;&emsp;&emsp;&emsp;.byte</br>&emsp;#else</br>&emsp;&emsp;&emsp;&emsp;.byte   LOADED_HIGH</br></br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;char loadflags;</br>&emsp;&emsp;&emsp;char type_of_loader;</br>&emsp;&emsp;&emsp;LOADHIGH = 1</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;DS = CS - DELTA_INITSEG;</bremsp;&emsp;&emsp;&emsp;if ( (loadflags & LOADHIGH) && !type_of_loader ) {</br>&emsp;&emsp;&emsp;&emsp;&emsp;prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&emsp;&emsp;&emsp;goto no_sig_loop;</br>&emsp;&emsp;&emsp;}</br>&emsp;}</br></br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR  = 0x1E8</br>&emsp;&emsp;&emsp;E820MAP = 0x2D0</br>&emsp;{</br>&emsp;&emsp;&emsp;(long)DS:[0x1E0] = 0;</br></br>&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL</br>&emsp;&emsp;&emsp;(byte)DS:[0x1E8] = 0;</br></br>&emsp;struct efi_variable</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;&emsp;grub_efi_guid_t guid;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t namelen;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t size;</br>&emsp;&emsp;&emsp;&emsp;multiboot_uint16_t reserved;</br>&emsp;&emsp;&emsp;};</br>&emsp;}</br></br>&emsp;initialize() {</bremsp;&emsp;multiboot_uint32_t size;</br>&emsp;}"],
+					 typeSpeed: 0,
+					 backDelay: 20,
+					 loop: false,
+					 loopCount: false,
+					 callback: function () {
+						 var date = new Date();
+						 date.setTime(date.getTime() + (6*24*60*60*1000));
+						 var expires = "expires="+date.toUTCString();
+						 document.cookie = 'introCookie' + "=" + 'visited' + "; " + expires;
+					 }
+				});
+			});
 
-			function removeInfo() {
-				
-			}
+			$("#intro-button").click(function() {
+				$('#welcome').css({
+					'visibility': 'hidden'
+				})
+			});
     </script>
 
   </footer>

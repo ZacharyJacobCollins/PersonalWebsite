@@ -50,6 +50,10 @@ function TypingIntro() {
   });
 }
 
+function Typed() {
+    
+}
+
 function ScrollLock() {
   $('body').css('overflow','hidden');
   $('body').attr('scroll','no');
