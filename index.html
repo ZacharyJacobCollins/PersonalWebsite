@@ -13,10 +13,9 @@ TODO transfer the typing intro over
 
 			<title>Zachary Jacob Collins</title>
 
-	    <link rel="Shortcut Icon" href="images/titleIcon.ico"/>
-	    <link rel="prefetch" src="images/gears.jpg"/>
-	    <link rel="stylesheet" type="text/css" href="_CSS/StyleSheets/Intro.css"/>
-	    <link rel="stylesheet" href="_CSS/FontAwesome/font-awesome-4.4.0/css/font-awesome.min.css"/>
+	    <link rel="Shortcut Icon" href="_Images/titleIcon.ico"/>
+	    <link rel="stylesheet" type="/text/css" href="_CSS/StyleSheets/Intro.css"/>
+	    <link rel="stylesheet" href="_CSS/FontAwesome/css/font-awesome.min.css"/>
 
 	    <meta name="Zachary Collins Personal Website" content="">
 	    <meta name="Zachary Collins" content="">
@@ -40,9 +39,17 @@ TODO transfer the typing intro over
 	    <script src="./_JS/Typed.js"></script>
 	    <script src="./_JS/Theater.js"></script>
 	    <script src="./_JS/Introduction.js"></script>
-	    <script src="./_JS/Shared/SmoothScroll.js"></script>
+	    <script src="./_JS/SmoothScroll.js"></script>
   	</head>
   <body>
+
+
+		<!-- TODO different fonts
+	      TODO home and intro are slightly different, home looks better.
+
+	     contains a redirect if the intro has been visited before -->
+	    <script type="text/javascript">checkCookie();</script>
+
 
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
@@ -59,18 +66,27 @@ TODO transfer the typing intro over
                 </ul>
               </nav>
 						-->
+
+
+
             </div>
           </div>
 
 					<!--Typing introduction and button div-->
-          <div class="inner cover">
+					<div class="inner cover">
 						<div id="intro-section">
 							<container id="welcomePackage">
 								<span id="welcome"><script>Intro();</script></span>
 								<a href="#" id="intro-button">Initialize();</a>
 							</container>
 						</div>
-          </div>
+					</div>
+
+
+
+					<!--typing transition section-->
+						 <section class="code-transition" id="typing-intro"></section>
+
 
 					<!--
           <div class="mastfoot">
@@ -83,41 +99,16 @@ TODO transfer the typing intro over
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Cover Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Cover Template for Bootstrap_files/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Cover Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+
+
+
 
 	</body>
 	<footer>
-    <!-- Executes intro typing text -->
+		<!-- Executes intro typing text -->
     <script>
       $(function() {
           $('#intro-button').click(function() {
-                $('body').css({
-                  'transform': 'translate(0px, -200%)'
-                });
-                $('*').css({
-                  'background-color': 'white',
-                  'color': '#686868'
-                })
-                $('#banner-name').css({
-                  'background-color': 'white',
-                  'color': 'black'
-                })
-                $('a').css({
-                  'background-color': 'white',
-                  'color': 'black'
-                })
-                $('#intro-button').css({
-                  'transition': 'all 8s ease-in',
-                  '-webkit-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out', /** Chrome & Safari **/
-                  '-moz-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out', /** Firefox **/
-                  '-o-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out' /** Opera **/
-                })
 
                 $("#typing-intro").typed({
                   strings: ["&emsp;INITSEG  = DEF_INITSEG</br>&emsp;SYSSEG   = DEF_SYSSEG</br>&emsp;SETUPSEG = DEF_SETUPSEG</br></br>&emsp;#ifndef __BIG_KERNEL__</br>&emsp;&emsp;&emsp;&emsp;.byte</br>&emsp;#else</br>&emsp;&emsp;&emsp;&emsp;.byte   LOADED_HIGH</br></br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;char loadflags;</br>&emsp;&emsp;&emsp;char type_of_loader;</br>&emsp;&emsp;&emsp;LOADHIGH = 1</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;DS = CS - DELTA_INITSEG;</bremsp;&emsp;&emsp;&emsp;if ( (loadflags & LOADHIGH) && !type_of_loader ) {</br>&emsp;&emsp;&emsp;&emsp;&emsp;prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&emsp;&emsp;&emsp;goto no_sig_loop;</br>&emsp;&emsp;&emsp;}</br>&emsp;}</br></br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR  = 0x1E8</br>&emsp;&emsp;&emsp;E820MAP = 0x2D0</br>&emsp;{</br>&emsp;&emsp;&emsp;(long)DS:[0x1E0] = 0;</br></br>&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL</br>&emsp;&emsp;&emsp;(byte)DS:[0x1E8] = 0;</br></br>&emsp;struct efi_variable</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;&emsp;grub_efi_guid_t guid;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t namelen;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t size;</br>&emsp;&emsp;&emsp;&emsp;multiboot_uint16_t reserved;</br>&emsp;&emsp;&emsp;};</br>&emsp;}</br></br>&emsp;initialize() {</bremsp;&emsp;multiboot_uint32_t size;</br>&emsp;}"],
@@ -132,8 +123,22 @@ TODO transfer the typing intro over
                      document.cookie = 'introCookie' + "=" + 'visited' + "; " + expires;
                    }
               });
+							$('*').css({
+								'background-color': 'white',
+							})
+							$('#welcome').css({
+								'visibility': 'hidden'
+							})
+							$('a').css({
+								'visibility': 'hidden'
+							})
           })
       })
+
+			function removeInfo() {
+				
+			}
     </script>
+
   </footer>
 </html>

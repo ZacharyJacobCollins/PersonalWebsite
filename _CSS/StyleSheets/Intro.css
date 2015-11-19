@@ -11,9 +11,6 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, body, figure { m
   font-family: 'Arkhip';
   background-color: black;
   transition: all 8s ease-in;
-  -webkit-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Chrome & Safari **/
-  -moz-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Firefox **/
-  -o-transition: all 8s ease-in, color 11s linear, background-color 11s ease-out; /** Opera **/
 }
 
 html, body {
@@ -98,11 +95,11 @@ h2 {
   font-size: 10pt;
   font-weight: bold;
   color: black;
-  -webkit-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
-  -moz-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
-  -o-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
-  -ms-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
-  transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear;
+  -webkit-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear, visibility 0 linear;
+  -moz-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear, visibility 0 linear;
+  -o-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear, visibility 0 linear;
+  -ms-transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear, visibility 0 linear;
+  transition: opacity 700ms linear, color 1500ms linear, background-color 700ms linear, visibility 0 linear;
 }
 
 #intro-button:hover {
