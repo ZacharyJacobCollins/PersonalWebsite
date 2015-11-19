@@ -95,6 +95,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  #typing-intro {
+    font-size: 8pt;
+  }
+  #intro-button{
+    font-size: 8pt;
+  }
   .masthead-brand {
     float: left;
   }
@@ -132,6 +138,17 @@ body {
  */
 
 @media (min-width: 768px) {
+
+  #typing-intro {
+    font-size: 8pt;
+  }
+  #intro-button{
+    font-size: 8pt;
+  }
+
+  #intro-section {
+    font-size: 8pt;
+  }
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -158,5 +175,11 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+  }
+  #typing-intro {
+    font-size: 8pt;
+  }
+  #intro-button{
+    font-size: 8pt;
   }
 }
