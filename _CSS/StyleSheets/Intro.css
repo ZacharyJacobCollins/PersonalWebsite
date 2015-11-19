@@ -43,7 +43,7 @@ h2 {
   margin: 0px;
   padding: 25px;
   border-radius: .5in;
-  font-size: 13pt;
+  font-size: 1vw;
   float: left;
   margin-bottom: 0px;
   background-color: white !important;
@@ -69,7 +69,7 @@ h2 {
   border-radius: 0;
   padding: 0;
   color: white;
-  font-size: 20pt;
+  font-size: 2vw;
 }
 
 #intro-button {
@@ -88,7 +88,7 @@ h2 {
   border-color: gray;
   border-radius: .25in;
   border-width: thin;
-  font-size: 10pt;
+  font-size: .75vw;
   font-weight: bold;
   color: black;
   -webkit-transition: ease-in 2s;
