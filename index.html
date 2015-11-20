@@ -107,6 +107,10 @@ TODO transfer the typing intro over
 
 			//hides the welcome heading and intro button on click
 			$("#intro-button").click(function() {
+				$('#typing-intro').css({
+					'width' : '100%',
+					'height': '100%',
+				})
 				$('#intro-section').remove();
 				$('#intro-button').remove();
 			});
