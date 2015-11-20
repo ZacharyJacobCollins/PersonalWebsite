@@ -57,10 +57,16 @@ h2 {
 
 }
 
+#intro-div {
+  text-align: left;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
 #intro-section {
   background-color: black;
-  width: 100%;
-  height: 100%;
   margin-top: 0;
   padding-top: 0;
   align-items: center;
@@ -70,6 +76,7 @@ h2 {
   padding: 0;
   color: white;
   font-size: 20pt;
+  line-height: 50vw;
 }
 
 #intro-button {
@@ -112,21 +119,37 @@ h2 {
 }
 
 #home {
+  display: inline;
+  z-index: -1;
   color: white;
+  background-color: black;
+  animation: switchHome 5s normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  /* TODO include moz and chrome webkit support, check here http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-play-state */
 }
 
+@keyframes switchHome {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 20;
+  }
+  to {
+    opacity: 1;
+    z-index: 20;
+     }
+  }
+
 #typing-intro {
-  position: relative;
+  z-index: 2;
   float: left;
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
   font-size: 12pt;
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  color: white;
   background-color: black;
-  overflow: hidden;
   border: 0px;
   color: lime;
   -webkit-transition: ease-in 2s;
@@ -134,32 +157,54 @@ h2 {
   -o-transition: ease-in 2s;
   -ms-transition: ease-in 2s;
   transition: ease-in 2s;
+  animation: scaleText 5s normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  /* TODO include moz and chrome webkit support, check here http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-play-state */
 }
 
-#typing-into.scale {
-  
-}
+@keyframes scaleText {
+  from {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1, 1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(4, 4);
+     }
+  }
 
-@-webkit-keyframes scaleAnimation{
+   /*@-moz-keyframes scaleText {
+     0% {
+       width: 300%;
 
-	0%   {-webkit-transform: scale(0,10);}
-	25%   {-webkit-transform: scale(10,11);}
-	50%  {-webkit-transform: scale(11,12);}
-	75%  {-webkit-transform: scale(13,14);}
-	100%  { -webkit-transform: scale(0,0);}
+     }
 
-}
+     100% {
+       width: 300%;
+     }
+   }
+   @-webkit-keyframes scaleText {
+     0% {
+       width: 300%;
+
+     }
+
+     100% {
+       width: 300%;
+     }
+   }
+   */
 
 #bottom-nav {
-  position: absolute;
-  left: .4in;
-  top: 295%;
-  text-align: left;
+  display: block;
   color: black;
-  width: 100%;
-  font-size: 18pt;
-  height: .5in;
-  padding-left:3em;
+  margin: .25in;
+  font-size: 15pt;
 }
 
 #jobbox {
@@ -173,8 +218,6 @@ h2 {
 #banner-wrapper {
   height: 2in;
   width: 100%;
-  margin-bottom: 0in;
-  top: 100%;
 }
 
 
@@ -183,7 +226,6 @@ h2 {
   top: .2in;
   left: .2in;
   width: 98%;
-  text-align: left;
 }
 
 #profile-picture-wrapper {
@@ -192,23 +234,18 @@ h2 {
 }
 
 #profile-picture {
+  display: inline-block;
   position: relative;
-  float: right;
+
   border-radius: 1in;
-  height: 5.5in;
-  width: 5.5in;
-  right: 2in;
-  top: .5in;
+
+  height: 25vw;
+  width: 25vw;
 }
 
 #profile-paragraph {
   position: relative;
-  float: left;
-  width: 6in;
-  height: 5in;
-  left: 3in;
-  top: 1.5in;
-  font-size: 17pt;
+  font-size: 12pt;
 }
 
 #compsci-link {

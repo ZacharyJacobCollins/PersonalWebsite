@@ -1,6 +1,6 @@
 
 function Intro() {
-    window.ScrollLock();
+  //  window.ScrollLock();
     "use strict";
     var $log    = document.querySelector("#log");
     var theater = new TheaterJS();
