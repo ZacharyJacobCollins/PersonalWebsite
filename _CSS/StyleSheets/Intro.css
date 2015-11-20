@@ -116,6 +116,7 @@ h2 {
 }
 
 #typing-intro {
+  position: relative;
   float: left;
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
   font-size: 12pt;
@@ -128,6 +129,25 @@ h2 {
   overflow: hidden;
   border: 0px;
   color: lime;
+  -webkit-transition: ease-in 2s;
+  -moz-transition: ease-in 2s;
+  -o-transition: ease-in 2s;
+  -ms-transition: ease-in 2s;
+  transition: ease-in 2s;
+}
+
+#typing-into.scale {
+  
+}
+
+@-webkit-keyframes scaleAnimation{
+
+	0%   {-webkit-transform: scale(0,10);}
+	25%   {-webkit-transform: scale(10,11);}
+	50%  {-webkit-transform: scale(11,12);}
+	75%  {-webkit-transform: scale(13,14);}
+	100%  { -webkit-transform: scale(0,0);}
+
 }
 
 #bottom-nav {
