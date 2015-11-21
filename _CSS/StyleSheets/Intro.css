@@ -58,6 +58,7 @@ h2 {
 }
 
 #intro-div {
+  padding: .5in;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +73,6 @@ h2 {
   background-color: black;
   margin-top: 0;
   padding-top: 0;
-  align-items: center;
-  text-align: center;
   margin-top: 0;
   border-radius: 0;
   padding: 0;
@@ -147,20 +146,16 @@ h2 {
   }
 
 #typing-intro {
+
   width: 0;
   height: 0;
   z-index: 2;
-  float: left;
   font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
   font-size: 12pt;
   background-color: black;
   border: 0px;
   color: lime;
   margin: .25in;
-  -webkit-transition: ease-in 2s;
-  -moz-transition: ease-in 2s;
-  -o-transition: ease-in 2s;
-  -ms-transition: ease-in 2s;
   transition: ease-in 2s;
   animation: scaleText 5s normal;
   animation-fill-mode: forwards;
