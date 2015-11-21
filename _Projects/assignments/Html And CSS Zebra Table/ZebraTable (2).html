@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <title>Zebra Tables</title>
+  <style>
+      #ZebraTable {
+         font-family: sans-serif;
+         border: solid black;
+         border-collapse: collapse;
+      }
+      th {
+        background-color: black;
+        color: white;
+        border-color: white;
+      }
+      #greyTD{
+        background-color: #EEE;
+      }
+      p {
+        font-style: italic;
+      }
+  </style>
+</head>
+<body>
+  <table id="ZebraTable" border="1">
+    <thead>
+      <tr>
+        <th>Geographic Origin</th>
+        <th>Number of Students</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>California</td>
+        <td>2,943</th>
+      </tr>
+      <tr>
+        <td id="greyTD">Other US</th>
+        <td id="greyTD">3,447</td>
+      </tr>
+      <tr>
+        <td>Asia</th>
+        <td>264</td>
+      </tr>
+      <tr>
+        <td id="greyTD">The Americas</th>
+        <td id="greyTD">83</td>
+      </tr>
+      <tr>
+        <td>Europe</th>
+        <td>69</td>
+      </tr>
+      <tr>
+        <td id="greyTD">Africa</th>
+        <td id="greyTD">44</td>
+      </tr>
+      <tr>
+        <td>Middle East and North Africa</th>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td id="greyTD">Pacific Basin</th>
+        <td id="greyTD">6</td>
+      </tr>
+      </tbody>
+  </table>
+    <p>Source: Stanford Facts Website</p>
+</body>
+</html>

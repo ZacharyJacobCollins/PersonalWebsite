@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EMU Carpool Registration</title>
+<meta charset="UTF-8">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
+<script src="changer.js" defer></script>
+</head>
+<div id="helpMenu">
+	<img style="padding:.1in;" src="images/gear-icon.png" alt="menu" height="30" onclick="toggle_visibility(&quot;openMenu&quot;)"/>
+	</div>
+	<div id="openMenu">
+		<img src="images/eye-icon.png" alt="grayscale" height="50" onclick="toggle_greyscale()"/>
+		<img src="images/plus-icon.png" alt="increase" height="50" onclick="resizeText(1)"/>
+		<img src="images/minus-icon.png" alt="decrease" height="50" onclick="resizeText(-1)"/>
+	</div>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="index.html">Homepage</a></li>
+				<li class="current_page_item"><a href="finder.html">Find Carpoolers</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+	</div>
+	<!--<div id="banner"></div>-->
+	<div id="page" class="container">
+		<div id="content">
+			<div class="title">
+				<h2>Find Carpoolers</h2></div>
+				<form action="finder.php" method="POST" >
+					<h3>Student Information</h3>
+					<table>
+						<tr>
+							<td>Pooler's Email</td>
+							<td><input type="text" name="email" pattern=".*[@].*"></td>
+						</tr>
+						<tr>
+							<td><input type="submit" name="email" value="Submit" action="finder.php"></td>
+						</tr>
+					</table>
+				</form>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="footer-wrapper">
+	<div id="footer" class="container">
+		Group 7, EMU Hackathon 2015
+	</div>
+</div>
+</body>
+</html>

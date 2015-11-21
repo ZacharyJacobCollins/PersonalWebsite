@@ -43,39 +43,57 @@ TODO transfer the typing intro over
 					<span id="welcome"><script>Intro();</script></span>
 					<a href="#" id="intro-button">Initialize();</a>
 			</div>
-
-			<!--typing transition section-->
-			<section id="typing-intro"></section>
 		</div>
 
+		<!--typing transition section-->
+		<div id="typing-intro"></div>
+
+		<div id="homeCover"></div>
+
+		<!-- home section -->
+		<section id="home">
+			<div id="banner-wrapper" >
+				 <h1 id="banner-name">Zachary Jacob Collins</h1>
+			</div>
+			<div id="bottom-nav">
+				<a href="../_HTML/projects.html">Projects</a>
+				<a href="../_HTML/blog.html">Blog</a>
+				<a href="../_HTML/contact.html">Contact</a>
+			</div>
+				<img src="./_Images/LightSaber.jpg" id="profile-picture" alt="A picture of me!" >
+			<h3>
+				<br><br>
+				I am a builder,
+				<br><br>
+				a Leader,
+				<br><br>
+				an Engineer.
+			</h3>
+		</section>
 
 	</body>
 
 	<footer>
   	<script type="text/javascript">
-		//Executes the typing effect on click, as well as sets the skip intro cooki
+		//Executes the typing effect on click, as well as sets the skip intro cookie
 			$("#intro-button").click(function() {
 				$("#typing-intro").typed({
 					//Displays this kernal bootup via a typing animation
-					strings: ["INITSEG=DEF_INITSEG</br>&emsp;SYSSEG"+
-					"=DEF_SYSSEG</br>&emsp;SETUPSEG=DEF_SETUPSEG</br>"+
+					strings: ["INITSEG=DEF_INITSEG</br>SYSSEG"+
+					"=DEF_SYSSEG</br>SETUPSEG=DEF_SETUPSEG</br>"+
 					"&emsp;#ifndef __BIG_KERNEL__</br>&emsp;&emsp;&emsp;&emsp;."+
 					"byte</br>&emsp;#else</br>&emsp;&emsp;&emsp;&emsp;.byte"+
-					"LOADED_HIGH</br></br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;"+
+					"LOADED_HIGH</br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;"+
 					"char loadflags;</br>&emsp;&emsp;&emsp;char type_of_loader;</br>"+
-					"&emsp;&emsp;&emsp;LOADHIGH = 1</br>&emsp;&emsp;&emsp;{</br>&emsp;&"+
 					"emsp;&emsp;DS=CS - DELTA_INITSEG;</bremsp;&emsp;&emsp;&emsp;if"+
 					"( (loadflags & LOADHIGH) && !type_of_loader ) {</br>&emsp;&emsp;&ems"+
-					"p;&emsp;&emsp;prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&em"+
+					"p;&emsp;&emsp;</br>prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&em"+
 					"sp;&emsp;&emsp;goto no_sig_loop;</br>&emsp;&emsp;&emsp;}</br>&emsp;}"+
-					"</br></br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR=0x1E8</br"+
+					"</br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR=0x1E8</br"+
 					">&emsp;&emsp;&emsp;E820MAP=0x2D0</br>&emsp;{</br>&emsp;&emsp;&emsp;("+
-					"long)DS:[0x1E0] = 0;</br></br>&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL"+
+					"long)DS:[0x1E0] = 0;&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL"+
 					"</br>&emsp;&emsp;&emsp;(byte)DS:[0x1E8]=0;</br></br>&emsp;struct efi"+
-					"_variable</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;&emsp;grub_efi_"+
-					"guid_t guid;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t namelen;</br>&em"+
 					"sp;&emsp;&emsp;&emsp;grub_uint32_t size;</br>&emsp;&emsp;&emsp;&emsp;mult"+
-					"iboot_uint16_t reserved;</br>&emsp;&emsp;&emsp;};</br>&emsp;}</br></br>&ems"+
 					"p;initialize() {</bremsp;&emsp;multiboot_uint32_t size;</br>&emsp;}],"],
 					 typeSpeed: 0,
 					 backDelay: 20,
@@ -84,17 +102,17 @@ TODO transfer the typing intro over
 						 //TODO  relocate the cookie out of the callback to it's own function.
 						 callback: function() {
 								 $('#typing-intro').css({
-
 									 'animation-play-state' : 'running',
+									 callback: function() {
+										 $('#home').css({
+											'animation-play-state' : 'running'
+										})
+									 }
 								 }).remove(500);
 
-								 $('#home').css({
-									'animation-play-state' : 'running'
-								})
 						 }
 				});
 			});
-
 			//Verify that the cookie is set correctly TODO
 			$("#intro-button").click(function() {
 				var date = new Date();
@@ -102,43 +120,18 @@ TODO transfer the typing intro over
 				var expires = "expires="+date.toUTCString();
 				document.cookie = 'introCookie' + "=" + 'visited' + "; " + expires;
 			});
-
 			//hides the welcome heading and intro button on click
 			$("#intro-button").click(function() {
-				$('#intro-div').css({
-					'justify-content': 'left',
-					'align-items': 'left',
-					'margin' : '0',
-					'padding' : '0',
-				});
-				$('#typing-intro').css({
-					'height' : '100%',
-					'width' : '100%',
-				});
+
+//				$('#typing-intro').css({
+//					'height' : '100%'
+//				});
+				$('#intro-div').remove();
 				$('#intro-section').remove();
 				$('#intro-button').remove();
 			});
 			/*
-			<!-- home section -->
-	    <section id="home">
-	      <div id="banner-wrapper" >
-	         <h1 id="banner-name">Zachary Jacob Collins</h1>
-	      </div>
-				<div id="bottom-nav">
-					<a href="../_HTML/projects.html">Projects</a>
-					<a href="../_HTML/blog.html">Blog</a>
-					<a href="../_HTML/contact.html">Contact</a>
-				</div>
-	        <img src="./_Images/LightSaber.jpg" id="profile-picture" alt="A picture of me!" >
-				<h3>
-					<br><br>
-					I am a builder,
-					<br><br>
-					a Leader,
-					<br><br>
-					an Engineer.
-				</h3>
-	    </section>
+
 			*/
     </script>
   </footer>

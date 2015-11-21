@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EMU Carpool Tool</title>
+<meta charset="UTF-8">
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,200,500,600,700,800,300" rel="stylesheet" />
+<!--<script src="cookies.js"></script>-->
+<script src="changer.js" defer></script>
+<style>body{overflow-y: hidden}</style>
+</head>
+<div id="helpMenu">
+		<img style="padding:.1in;" src="images/gear-icon.png" alt="menu" height="30" onclick="toggle_visibility(&quot;openMenu&quot;)"/>
+	</div>
+	<div id="openMenu">
+		<img src="images/eye-icon.png" alt="grayscale" height="50" onclick="toggle_greyscale()"/>
+		<img src="images/plus-icon.png" alt="increase" height="50" onclick="resizeText(1)"/>
+		<img src="images/minus-icon.png" alt="decrease" height="50" onclick="resizeText(-1)"/>
+	</div>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="index.html">Homepage</a></li>
+				<li><a href="finder.html">Find Carpoolers</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		</div>
+
+	<!--<div id="banner"></div>-->
+	<div id="payPage" class="container">
+		<div id="content" >
+			<div class="title">
+				<h2>Pay for your group pass!</h2>
+			  <p>You will be responsible for your portion of the parking pass, or 100 divided by n number of group members!</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
