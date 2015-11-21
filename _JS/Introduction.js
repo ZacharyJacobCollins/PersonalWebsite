@@ -1,6 +1,6 @@
 
 function Intro() {
-  //  window.ScrollLock();
+   window.ScrollLock();
     "use strict";
     var $log    = document.querySelector("#log");
     var theater = new TheaterJS();
@@ -27,9 +27,9 @@ function Intro() {
       theater
             .write("Welcome:", 2000)
             .write("Welcome:Hello there. ", 1200)
-            //.write("Welcome: My name is Zac.", 1000)
-          //  .write("Welcome:I am a Software Engineer.", 2000)
-            //.write("Welcome:And this is my site.", 300, ".", 300, ".")
+            .write("Welcome: My name is Zac.", 1000)
+            .write("Welcome:I am a Software Engineer.", 2000)
+            .write("Welcome:Welcome to my domain.", 300, ".", 300, ".")
             .write(function() {
             window.document.getElementById('intro-button').style.visibility = "visible";
             window.document.getElementById('intro-button').style.opacity = "1";
