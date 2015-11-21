@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <title>Zachary Jacob Collins</title>
+    <meta charset="utf-8">
+    <meta name="viewport"     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="Shortcut Icon" href="images/titleIcon.ico"/>
+    <link rel="prefetch"      src="images/gears.jpg"/>
+    <link rel="stylesheet"    type="text/css" href="_CSS/StyleSheets/Intro.css"/>
+    <link rel="stylesheet"    href="_CSS/FontAwesome/font-awesome-4.4.0/css/font-awesome.min.css"/>
+    <script src="./_JQUERY/jquery-2.1.4.min.js"></script>
+    <script src="./_JS/Typed.js"></script>
+    <script src="./_JS/Theater.js"></script>
+    <script src="./_JS/Introduction.js"></script>
+    <script src="./_JS/Shared/SmoothScroll.js"></script>
+  </head>
+  <body>
+    <!-- TODO different fonts
+      TODO home and intro are slightly different, home looks better.
+
+     contains a redirect if the intro has been visited before -->
+    <script type="text/javascript">checkCookie();</script>
+
+    <!--TheaterJS INTRO executeTheater-->
+    <div id="intro-section">
+        <span id="welcome" class="lead"><script>Intro();</script></span><!--this span is the welcome character -->
+        <a href="#" id="intro-button">Initialize();</a>
+    </div>
+
+    <!--typing transition section-->
+    <section class="code-transition" id="typing-intro"></section>
+
+    <!-- home section -->
+      <section id="home">
+        <div id="banner-wrapper">
+           <h1 id="banner-name">Zachary Jacob Collins</h1>
+        </div>
+        <div id="profile-picture-wrapper">
+          <p id="profile-paragraph">
+            <br><br>
+            I'm a builder,
+            <br><br>
+            a Leader,
+            <br><br>
+            an Engineer.
+          </p>
+          <img src="_Images/LightSaber.jpg" id="profile-picture" alt="A picture of me!" >
+        </div>
+        <div id="bottom-nav">
+          <a style="padding-left:3em;" href="/zcollin1/_HTML/projects.html">Projects</a>
+          <a style="padding-left:33%;" href="/zcollin1/_HTML/blog.html">Blog</a>
+          <a style="padding-left:33%;" href="/zcollin1/_HTML/contact.html">Contact</a>
+        </div>
+      </section>
+  </body>
+
+  <footer>
+    <!-- Executes intro typing text -->
+    <script>
+      $(function() {
+          $('#intro-button').click(function() {
+                $('body').css({
+                  'transform': 'translate(0px, -200%)'
+                });
+                $('*').css({
+                  'background-color': 'white',
+                  'color': '#686868'
+                })
+                $('#banner-name').css({
+                  'background-color': 'white',
+                  'color': 'black'
+                })
+                $('a').css({
+                  'background-color': 'white',
+                  'color': 'black'
+                })
+                $('#intro-button').css({
+                  'transition': 'all 8s ease-in',
+                  '-webkit-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out', /** Chrome & Safari **/
+                  '-moz-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out', /** Firefox **/
+                  '-o-transition': 'all 8s ease-in, color 11s linear, background-color 11s ease-out' /** Opera **/
+                })
+
+                $("#typing-intro").typed({
+                  strings: ["&emsp;INITSEG  = DEF_INITSEG</br>&emsp;SYSSEG   = DEF_SYSSEG</br>&emsp;SETUPSEG = DEF_SETUPSEG</br></br>&emsp;#ifndef __BIG_KERNEL__</br>&emsp;&emsp;&emsp;&emsp;.byte</br>&emsp;#else</br>&emsp;&emsp;&emsp;&emsp;.byte   LOADED_HIGH</br></br>&emsp;good_sig()</br>&emsp;&emsp;&emsp;char loadflags;</br>&emsp;&emsp;&emsp;char type_of_loader;</br>&emsp;&emsp;&emsp;LOADHIGH = 1</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;DS = CS - DELTA_INITSEG;</bremsp;&emsp;&emsp;&emsp;if ( (loadflags & LOADHIGH) && !type_of_loader ) {</br>&emsp;&emsp;&emsp;&emsp;&emsp;prtstr(Wrong loader, giving up...);</br>&emsp;&emsp;&emsp;&emsp;&emsp;goto no_sig_loop;</br>&emsp;&emsp;&emsp;}</br>&emsp;}</br></br>&emsp;loader_ok()</br>&emsp;&emsp;&emsp;E820NR  = 0x1E8</br>&emsp;&emsp;&emsp;E820MAP = 0x2D0</br>&emsp;{</br>&emsp;&emsp;&emsp;(long)DS:[0x1E0] = 0;</br></br>&emsp;#ifndef STANDARD_MEMORY_BIOS_CALL</br>&emsp;&emsp;&emsp;(byte)DS:[0x1E8] = 0;</br></br>&emsp;struct efi_variable</br>&emsp;&emsp;&emsp;{</br>&emsp;&emsp;&emsp;&emsp;grub_efi_guid_t guid;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t namelen;</br>&emsp;&emsp;&emsp;&emsp;grub_uint32_t size;</br>&emsp;&emsp;&emsp;&emsp;multiboot_uint16_t reserved;</br>&emsp;&emsp;&emsp;};</br>&emsp;}</br></br>&emsp;initialize() {</bremsp;&emsp;multiboot_uint32_t size;</br>&emsp;}"],
+                   typeSpeed: 0,
+                   backDelay: 20,
+                   loop: false,
+                   loopCount: false,
+                   callback: function () {
+                     var date = new Date();
+                     date.setTime(date.getTime() + (6*24*60*60*1000));
+                     var expires = "expires="+date.toUTCString();
+                     document.cookie = 'introCookie' + "=" + 'visited' + "; " + expires;
+                   }
+              });
+          })
+      })
+    </script>
+  </footer>
+</html>

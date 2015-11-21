@@ -1,0 +1,268 @@
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, body, figure { margin: 0; padding: 0; }
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'Arkhip';
+   src: local("Arkhip"),
+        url(../Fonts/Arkhip_font.ttf);
+}
+
+* {
+  font-family: 'Arkhip';
+  background-color: black;
+}
+
+html, body {
+  font-family: 'Arkhip';
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+  color: white;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+.project-box {
+  max-width: 1in;
+  min-width: 1in;
+  max-height: 1in;
+  min-height: 1in;
+  margin: 0px;
+  padding: 25px;
+  border-radius: .5in;
+  font-size: 1vw;
+  float: left;
+  margin-bottom: 0px;
+  background-color: white !important;
+  color:black !important;
+  align-items: center;
+  overflow: hidden;
+  text-align:center;
+}
+
+.project-box:hover {
+
+}
+
+#intro-div {
+  padding: .5in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.addedIntroDiv {
+  justify-content: left;
+  align-items: left;
+  margin : 0;
+  padding : 0;
+}
+
+#intro-section {
+
+  background-color: black;
+  margin-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+  border-radius: 0;
+  padding: 0;
+  color: white;
+  font-size: 20pt;
+}
+
+#intro-button {
+  top: .5in;
+  height: .6in;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  padding-right: .2in;
+  padding-left: .2in;
+  padding-bottom: .1in;
+  padding-top: .1in;
+  left: .35in;
+  z-index: 9;
+  background-color: white;
+  border-color: gray;
+  border-radius: .25in;
+  border-width: thin;
+  font-size: 12pt;
+  font-weight: bold;
+  color: black;
+  -webkit-transition: ease-in 2s;
+  -moz-transition: ease-in 2s;
+  -o-transition: ease-in 2s;
+  -ms-transition: ease-in 2s;
+  transition: ease-in 2s;
+}
+
+#intro-button:hover {
+  text-decoration: line-through;
+  background-color: black;
+  color: lime;
+}
+
+#intro-button:active {
+  text-decoration: line-through;
+  color: lime;
+  background-color: black;
+
+}
+
+#home {
+  display: inline;
+  z-index: -1;
+  color: white;
+  background-color: black;
+  animation: switchHome 5s normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  /* TODO include moz and chrome webkit support, check here http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-play-state */
+}
+
+@keyframes switchHome {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 20;
+  }
+  to {
+    opacity: 1;
+    z-index: 20;
+     }
+  }
+
+#typing-intro {
+  width: 0;
+  height: 0;
+  max-height: 800px;
+  z-index: 2;
+  font-family: 'Courier New' Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size: 8pt;
+  background-color: black;
+  border: 0px;
+  color: lime;
+  margin: .25in;
+  transition: ease-in 2s;
+  animation: scaleText 5s normal;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  /* TODO include moz and chrome webkit support, check here http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-play-state */
+}
+
+@keyframes scaleText {
+  from {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1, 1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(4, 4);
+     }
+  }
+
+   /*@-moz-keyframes scaleText {
+     0% {
+       width: 300%;
+
+     }
+
+     100% {
+       width: 300%;
+     }
+   }
+   @-webkit-keyframes scaleText {
+     0% {
+       width: 300%;
+
+     }
+
+     100% {
+       width: 300%;
+     }
+   }
+   */
+
+#bottom-nav {
+  display: block;
+  color: black;
+  margin: .25in;
+  font-size: 15pt;
+}
+
+#jobbox {
+   margin: 0;
+   width:25%;
+   height:15%;
+   border: inset;
+   border-color: black;
+}
+
+#banner-wrapper {
+  height: 2in;
+  width: 100%;
+}
+
+
+#banner-name {
+  position: relative;
+  top: .2in;
+  left: .2in;
+  width: 98%;
+}
+
+#profile-picture-wrapper {
+  width: 100%;
+  height: 8in;
+}
+
+#profile-picture {
+  display: inline-block;
+  position: relative;
+
+  border-radius: 1in;
+
+  height: 25vw;
+  width: 25vw;
+}
+
+#profile-paragraph {
+  position: relative;
+  font-size: 12pt;
+}
+
+#compsci-link {
+  color:white;
+  text-align: right;
+}
+
+a {
+  text-decoration:none;
+  color: white;
+}
+
+a:hover {
+  color: lime;
+}

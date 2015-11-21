@@ -1,0 +1,495 @@
+/*
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Edited by Jeremy Ginnard
+*/
+
+html, body {
+	height: 100%;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+body {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	margin: 0px;
+	padding: 0px;
+	background: #1E1B1A;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	color: #363636;
+
+}
+
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+p, ol, ul {
+	margin-top: 0px;
+}
+
+p {
+	line-height: 190%;
+}
+
+strong {
+}
+
+a {
+	color: #171717;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+	.image
+	{
+		display: inline-block;
+	}
+
+		.image img
+		{
+			display: block;
+			width: 100%;
+		}
+
+	.image-full
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+
+	.image-left
+	{
+		float: left;
+		margin: 0 2em 2em 0;
+	}
+
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+
+		.image-centered img
+		{
+			margin: 0 auto;
+			width: auto;
+		}
+
+hr {
+	display: none;
+}
+
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+	ul.style1
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul.style1 li
+	{
+		border-top: solid 1px #E5E5E5;
+		padding: 0.80em 0;
+	}
+
+	ul.style1 li:first-child
+	{
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	ul.style2
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul.style2 li
+	{
+		border-top: solid 1px #E5E5E5;
+		padding: 0.80em 0;
+	}
+
+	ul.style2 li:first-child
+	{
+		border-top: 0;
+		padding-top: 0;
+	}
+
+
+/*********************************************************************************/
+/* Heading Titles                                                                */
+/*********************************************************************************/
+
+	.title
+	{
+		margin-bottom: 2em;
+		text-transform: uppercase;
+	}
+
+	.title h2
+	{
+		font-weight: 400;
+		font-size: 2em;
+		color: rgb(3, 117, 81);
+	}
+
+	.title .byline
+	{
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #6F6F6F;
+	}
+
+/** WRAPPER */
+
+#wrapper {
+	background: #FFFFFF url(images/bg01.png) repeat;
+}
+
+#footer-wrapper
+{
+	background: #363636;
+}
+
+.container {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+#header-wrapper
+{
+	background-size: 100%;
+	padding: 3em 0em 0em 0em;
+	background: rgb(3, 117, 81);
+	font-family: 'Stark';
+}
+
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+	}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+
+	#logo
+	{
+		width: 60em;
+		height: 15em;
+		margin: 0 auto;
+		padding: 0em 0em;
+		text-transform: uppercase;
+	}
+
+	#logo h1
+	{
+		letter-spacing: 0.2em;
+		font-size: 6em;
+		color: #FFFFFF;
+	}
+
+	#logo p
+	{
+		letter-spacing: 0.10em;
+		color: #FFFFFF;
+		font-size: 2em;
+	}
+
+	#logo a
+	{
+		text-decoration: none;
+		color: #FFF;
+	}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		overflow: hidden;
+		height: 300px;
+		background: url(images/ironman-banner.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	#banner .image
+	{
+	}
+
+
+/** MENU */
+
+#menu-wrapper
+{
+	background: #333333;
+}
+
+#menu {
+	overflow: hidden;
+	height: 60px;
+	width: 90%;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+	text-align: center;
+}
+
+#menu li {
+	display: inline-block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	letter-spacing: 1px;
+	padding: 0px 30px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.80em;
+	line-height: 60px;
+	border: none;
+	color: #FFF;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+}
+
+#menu .current_page_item a {
+	background: #77757f;
+}
+
+/** PAGE */
+
+#page
+{
+	height: 8in;
+	position: relative;
+	overflow: hidden;
+	padding: 6em 0em 5em 0em;
+}
+
+#payPage
+{
+	height: 12in;
+	position: relative;
+	overflow: hidden;
+	padding: 6em 0em 5em 0em;
+}
+
+/** CONTENT */
+
+#content
+{
+	padding: 6em 6em 5em 6em;
+	float: left;
+	width: 790px;
+}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+
+	#sidebar
+	{
+		float: right;
+		width: 345px;
+	}
+
+	#sidebar .title h2
+	{
+		font-size: 1.6em;
+	}
+
+	#sidebar .box1
+	{
+		margin-bottom: 3em;
+	}
+
+
+/*********************************************************************************/
+/* Welcome                                                                       */
+/*********************************************************************************/
+
+	#welcome
+	{
+		position: absolute;
+		top: 1.5em;
+		left: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #FFF;
+	}
+
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		display: inline-block;
+		margin-top: 1.5em;
+		padding: 1.50em 3em 1.50em 3em;
+		background: #16a085;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 0.90em;
+		color: #FFF;
+	}
+
+		.button:before
+		{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 20px;
+			text-align: center;
+			color: #FFF;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer-wrapper
+	{
+		overflow: hidden;
+		padding: 2em 0em;
+		background: #363636;
+	}
+
+	#footer
+	{
+		color: #ADADAD;
+		text-align: center;
+	}
+
+	#footer .title h2
+	{
+		font-weight: 400;
+		font-size: 1.2em;
+		color: #FFF;
+	}
+
+	#footer .title
+	{
+		border-color: #2D2926 !important;
+	}
+
+	#footer .style1 li
+	{
+		border-color: #2D2926 !important;
+	}
+
+	#footer .style1 a
+	{
+		font-size:1em;
+		color: #B1B1B1;
+	}
+
+	#box1
+	{
+		float: left;
+		width: 354px;
+		margin-right: 24px;
+		padding-right: 30px;
+	}
+
+	#box2
+	{
+		float: left;
+		width: 354px;
+		margin-left: 24px;
+		padding-right: 30px;
+	}
+
+	#box3
+	{
+		float: right;
+		width: 344px;
+		padding-left: 40px;
+	}
+
+/*********************************************************************************/
+/* Accessability Menu                                                            */
+/*********************************************************************************/
+#helpMenu{
+	position: absolute;
+	top: 5px;
+	left: 7px;
+	color: black;
+	width: 2em;
+	height:2em;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+#openMenu{
+	display: none;
+	position: absolute;
+	top:5px;;
+	left: 65px;
+	color: black;
+	width: 400px;
+	height:40px;
+	padding-left: 2px;
+	padding-right: 2px;
+
+}
+
+table, td, th {
+	padding: 5px;
+	white-space: nowrap;
+	border-collapse: collapse;
+}
